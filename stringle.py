@@ -8,8 +8,8 @@ def generate_frequencies() -> dict[str: dict[str: int]]:
     freqs = {}
     for char in ALPHA:
         freqs[char] = {}
-    for filename in os.listdir("stringle_texts"):
-        with open("stringle_texts/" + filename, "r", encoding = "utf8") as file:
+    for filename in os.listdir("Texts"):
+        with open("Texts" + filename, "r", encoding = "utf8") as file:
             for line in file:
                 line.removesuffix("\n")
                 line = line.upper()
